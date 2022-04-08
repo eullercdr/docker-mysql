@@ -4,14 +4,14 @@ services:
 
   db:
     build: ./.docker/mysql
-    container_name: codeplatform-db
+    container_name: mysql-container-db
     restart: always
     tty: true
     volumes:
       - ./.docker/dbdata:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=codeplatform
+      - MYSQL_DATABASE=mysql-db
     ports:
       - "42333:3306"
 
